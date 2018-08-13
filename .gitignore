@@ -3,3 +3,4 @@ __pycache__/
 ignore/
 train/
 train.zip
+*.db
