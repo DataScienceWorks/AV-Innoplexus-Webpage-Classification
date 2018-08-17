@@ -5,23 +5,21 @@
 Website: https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-ai-challenge/ 
 
 
-
+**Notes to self**
 This is my 2nd hackathon in AV. I couldn't even submit in my 1st hackathon - The McKinsey one where the insurance renewal commission got to be predicted I guess. Couldn't understand the problem statement :(
 
-Got $133$ rank (missed marking "final submission") with the prediction score being as poor as $0.3040729980$. Of the total X registrations, 188 submitted. A simple hack worked. Time was up before I could submit a better solution. My poor time management is to be blamed.
+Got **133** rank (missed marking "final submission") with the prediction score being as poor as **0.3040729980**. Of the total X registrations, 188 submitted. A simple hack worked. Time was up before I could submit a better solution. My poor time management is to be blamed.
 
 The highest score in leadership board was 0.9229874124.
 
 The least score in leadership board was 0 :)
 
-In my first hackathon  
-
+The zipped dataset size is about 1.3x GB. It is in your Microsoft's one-drive that you can access with your gmail-id.
 
 
 ## Tags
 
 Classification 
-
 
 
 ## Description
@@ -188,5 +186,3 @@ The profile of the user as updated at time of registering for the contest along 
 ## Data
 
 **Note :- The datasets in this competitions is solely meant to be used for this competition only. You cannot use it for any other purpose.**
-
-The zipped dataset size is about 1.3x GB. It is in your Microsoft's one-drive that you can access with your gmail-id.
