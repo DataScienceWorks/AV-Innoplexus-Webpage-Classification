@@ -1,0 +1,23 @@
+nickil [Today at 4:06 PM]
+1st place solution:
+--------------------
+
+I'd like to begin by thanking Team AV/Innoplexus for providing us with a real world NLP challenge and I'm sure everyone had fun likewise working on it and learning few things alongside. Sorry for not posting it earlier as I was awaiting a final confirmation from the AV officials. Anyway, here's the approach:
+
+*Model 1:* (Leak)
+There was clearly a pattern around the Webpage_id, and it looked very likely these weren't shuffled at all. By just concatenating train/test, sorting them by the ID field and backward filling of Tags (target) was enough to secure 0.88XX. I've attached a small snippet demonstrating this leakage using a Cross Validated approach.
+
+*Model 2:* (Non Leak)
+Since the size of the Html data was large to load directly in a dataframe, I processed them in chunks of size 5000 and extracted only the textual contents from it.
+A mixture of Bag of words model on the preprocessed Html data along with Label Encoding on the Domain field was later fed to a LightGBM Multiclass Classifier model. This could manage about 0.80XX.
+
+*Post processing:* (Combine predictions)
+The prediction from Model 2 was given preference over Model 1 if the max(class probabilities) exceeded 0.9 and it's argmax was replaced at the corresponding row keeping the rest (Model 1 predictions) unchanged. Was enough to score 0.92XX.
+
+*Tried attempts:* (DL)
+
+FastText based on Continuous Bag-of-Words model with three layers:
+
+  1. Embeddings layer: Inputs words and word bi-grams are all words in a HTML data
+   2. Mean/AveragePooling Layer: Taking average vector of Embedding vectors
+   3. Softmax layer (edited)
