@@ -2,5 +2,7 @@
 __pycache__/
 ignore/
 train/
+spark-warehouse/
 train.zip
 *.db
+*.log
